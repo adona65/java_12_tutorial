@@ -1,8 +1,5 @@
 package tutorial_000.languageNewFeatures;
 
-import java.io.FileNotFoundException;
-import java.io.UncheckedIOException;
-
 public class _001_SwitchExpressions {
 	/*
 	 * BEWARE : Remember that this is a preview feature (and so subject to changes/delete in future releases).
@@ -14,7 +11,8 @@ public class _001_SwitchExpressions {
 		 * (which is itself computed to a result, like the conditional/ternary operator "... ? ... : ..."). It now get a lambda-like syntax instead of classicals
 		 * break/return couples.
 		 * 
-		 * The main use case will be to assign the computed value to a variable (see assignSwitch()) :
+		 * The main use case will be to assign the computed value to a variable (see assignSwitch(), code is commented for avoiding compilation error
+		 * in IDE) : 
 		 */
 		assignSwitch(switchOptions.TWO);
 		System.out.println("---------------------------------------------");
@@ -38,8 +36,8 @@ public class _001_SwitchExpressions {
 	/**
 	 * Following method contain some new switch features (see comments).
 	 */
-	@SuppressWarnings("preview")
 	private static void assignSwitch(switchOptions argument) {
+		/*
 		String switchResult = switch (argument) {
 			// Multiple case labels (ONE, TWO).
 		    case ONE, TWO -> "first case";
@@ -58,13 +56,14 @@ public class _001_SwitchExpressions {
 		};
 		
 		System.out.println(switchResult);
+		*/
 	}
 	
 	/**
 	 * Following method show that we also may use new switch to to define variable even if the final type is unknown (thanks to "var" keyword).
 	 */
-	@SuppressWarnings("preview")
 	private static void unknownTypeAssignSwitch(switchOptions argument) {
+		/*
 		var switchResult = switch (argument) {
 		    case ONE, TWO -> "first case";
 		    case THREE -> 1;
@@ -76,6 +75,7 @@ public class _001_SwitchExpressions {
 		};
 		
 		System.out.println("unknownTypeAssignSwitch result is of type => " + switchResult.getClass());
+		*/
 	}
 	
 	enum switchOptions {
